@@ -2,3 +2,6 @@ plugins:
   topic_trade_buttons_enabled:
     default: false
     client: true
+  topic_trade_buttons_always_show_for_staff:
+    default: false
+    client: true

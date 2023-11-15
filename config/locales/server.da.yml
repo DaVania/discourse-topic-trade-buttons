@@ -1,6 +1,7 @@
 da:
   site_settings:
     topic_trade_buttons_enabled: "Emne handels knapper aktiveret?"
+    topic_trade_buttons_always_show_for_staff: "Vis altid aktiverede knapper for personale"
   topic_trading:
     sold: Solgt
     purchased: Købt

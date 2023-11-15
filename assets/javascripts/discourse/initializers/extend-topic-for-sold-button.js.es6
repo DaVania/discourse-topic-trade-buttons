@@ -14,7 +14,7 @@ function initializeWithApi(api) {
       return (
         !this.isPrivatemessage &&
         currentUser &&
-        currentUser.id === this.user_id &&
+        (currentUser.id === this.user_id || (currentUser.staff && this.siteSettings.topic_trade_buttons_always_show_for_staff)) &&
         this.siteSettings.topic_trade_buttons_enabled &&
         enable_sold_button &&
         !this.get("archived")
@@ -29,7 +29,7 @@ function initializeWithApi(api) {
       return (
         !this.isPrivatemessage &&
         currentUser &&
-        currentUser.id === this.user_id &&
+        (currentUser.id === this.user_id || (currentUser.staff && this.siteSettings.topic_trade_buttons_always_show_for_staff)) &&
         this.siteSettings.topic_trade_buttons_enabled &&
         enable_purchased_button &&
         !this.get("archived")
@@ -44,7 +44,7 @@ function initializeWithApi(api) {
       return (
         !this.isPrivatemessage &&
         currentUser &&
-        currentUser.id === this.user_id &&
+        (currentUser.id === this.user_id || (currentUser.staff && this.siteSettings.topic_trade_buttons_always_show_for_staff)) &&
         this.siteSettings.topic_trade_buttons_enabled &&
         enable_exchanged_button &&
         !this.get("archived")
@@ -59,7 +59,7 @@ function initializeWithApi(api) {
       return (
         !this.isPrivatemessage &&
         currentUser &&
-        currentUser.id === this.user_id &&
+        (currentUser.id === this.user_id || (currentUser.staff && this.siteSettings.topic_trade_buttons_always_show_for_staff)) &&
         this.siteSettings.topic_trade_buttons_enabled &&
         enable_cancelled_button &&
         !this.get("archived")
